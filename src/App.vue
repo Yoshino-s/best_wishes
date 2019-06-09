@@ -1,31 +1,39 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div id="content">
+      <router-view/>
     </div>
-    <router-view/>
+    <footer id="footer">
+      Powered by <a href="https://cn.vuejs.org/">Vuejs.</a>
+      <br/>
+      Programmed by <a href="https://github.com/yoshino-s/">Yoshino-s.</a>
+      <br/>
+      Source code hosted on <a href="https://github.com/yoshino-s/best_wishes/">Github</a>
+    </footer>
   </div>
 </template>
 
-<style>
+<style lang="less">
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-image: url(assets/bg.jpg);
+}
+
+#footer {
+  color: rgb(255, 255, 255);
+  background-color: #2196f3;
+  bottom: 0;
+  position: relative;
+  width: 100%;
+  max-height: 200px;
+  padding: 20px;
   text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+#content {
+  min-height: 80vh5;
+  padding: 10px;
+  margin: 0 auto;
+  width: 33%;
+  min-width: 300px;
 }
 </style>
