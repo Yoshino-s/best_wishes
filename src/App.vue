@@ -30,7 +30,7 @@
 }
 
 #content {
-  min-height: 80vh5;
+  min-height: 80vh;
   padding: 10px;
   margin: 0 auto;
   width: 33%;
