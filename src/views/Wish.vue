@@ -1,6 +1,6 @@
 <template>
   <mu-card id="wish-card">
-    <mu-card-media :title="'For ' + name + '.'">
+    <mu-card-media :title="'For you.My friend.'">
       <img :src="require('../assets/head.jpg')"/>
     </mu-card-media>
     <mu-card-text v-html="wish">
@@ -13,15 +13,12 @@
 
 <script>
 import marked from 'marked';
-import wish from '../assets/wish.json';
+import data from '../assets/data.json';
 
 export default {
   computed: {
-    name() {
-      return wish[this.$route.params.token][0];
-    },
     wish() {
-      return marked(wish[this.$route.params.token][1]);
+      return marked(data[this.$route.params.token][2]);
     },
   },
 };

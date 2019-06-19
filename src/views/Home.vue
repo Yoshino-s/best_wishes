@@ -38,14 +38,13 @@ export default {
     submit() {
       const p = (new MD5()).update(this.password).digest('hex');
       const n = (new MD5()).update(this.name).digest('hex');
-      const t = dat.find(i => i[0] === n && i[1] === p);
-      if (!t) {
+      const t = dat.findIndex(i => i[0] === n && i[1] === p);
+      if (t === -1) {
         this.errorOpen = true;
         if (this.timer) clearTimeout(this.timer);
         this.timer = setTimeout(() => { this.errorOpen = false; }, 1000);
       } else {
-        const token = p.slice(0, 5);
-        this.$router.push(`/wish/${token}`);
+        this.$router.push(`/wish/${t}`);
       }
     },
   },
