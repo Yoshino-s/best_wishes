@@ -4,12 +4,12 @@ import 'muse-ui/dist/muse-ui.css';
 // eslint-disable-next-line
 import 'typeface-roboto';
 
-import eruda from 'eruda';
+// import eruda from 'eruda';
 
 import App from './App.vue';
 import router from './router';
 
-eruda.init();
+// eruda.init();
 
 Vue.config.productionTip = false;
 Vue.use(MuseUI);
