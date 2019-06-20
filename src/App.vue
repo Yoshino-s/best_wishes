@@ -34,6 +34,6 @@
   padding: 10px;
   margin: 0 auto;
   width: 33%;
-  min-width: 300px;
+  min-width: calc( 100% - 20px );
 }
 </style>
